@@ -1,0 +1,5 @@
+sasl
+psycopg2
+-e git://github.com/airbnb/airflow@ba35124d75a3ad23266c324d729e80d5267e161f#egg=airflow[postgres,crypto]
+rauth
+flask-sslify

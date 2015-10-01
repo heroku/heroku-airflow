@@ -1,0 +1,20 @@
+{
+  "name": "Airflow Heroku",
+  "description": "Run Airflow on Heroku",
+  "image": "heroku/cedar:14",
+  "env": {
+    "AIRFLOW_HOME": {
+      "description": "Where all the information for airflow lives",
+      "value": "/app/user"
+    },
+    "AIRFLOW_SECRET_KEY": {
+      "description": "A secret key to verify the integrity of signed cookies",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    "heroku-postgresql",
+    "heroku-redis",
+    "mailgun:starter"
+  ]
+}
