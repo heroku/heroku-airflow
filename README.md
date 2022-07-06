@@ -45,6 +45,13 @@ $ heroku apps:create airflow-production
 $ heroku docker:release
 ```
 
+Airflow needs to have the environment variable `AIRFLOW_HOME` set to `/app/user`
+so that it loads the configuration from the correct location:
+
+```
+$ heroku config:set AIRFLOW_HOME=/app/user
+```
+
 At this point, we've got the Heroku app created and the containers built and
 deployed. We still need to get the Airflow metadata database setup:
 
