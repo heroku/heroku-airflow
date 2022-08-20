@@ -19,7 +19,7 @@ class OAuthSignIn(object):
     def callback(self):
         pass
 
-    def get_callback_url(self, scheme='http'):
+    def get_callback_url(self, scheme='https'):
         return url_for('auth_login.oauth_callback', provider=self.provider_name,
                         _external=True, _scheme=scheme)
 
